@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+/* *********** */
+:root {
+  font-family: 'Noto Sans Display', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: 'wdth' 100;
+
+  /* color-scheme: light dark; */
+  color: #f5f5f5;
+  background-color: #171717;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --table-accent-color: hsl(179, 84%, 10%);
+  --table-color-1: hsl(176, 61%, 15%); /* 19 */
+  --table-color-2: hsl(176, 69%, 18%); /* 22 */
+  --table-font-color: #f0fdfa;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+h1 {
+  font-size: 1.4rem;
+  margin-block-end: 1rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+  text-align: center;
+  font-style: italic;
+  margin-block-end: 1.4rem;
+}
+
+/* TABLE */
+table {
+  border-collapse: collapse;
+  margin: 0 auto;
+  font-size: 1.25rem; /* 20px */
+  line-height: 1.75rem; /* 28px */
+  font-weight: 300;
+  min-width: 284px;
+  color: var(--table-font-color);
+  border: 1px solid var(--table-accent-color);
+}
+
+table thead tr {
+  background-color: var(--table-accent-color);
+  /* color: #cbd5e1; */
+  text-align: left;
+}
+
+table th,
+table td {
+  padding: 6px 24px;
+}
+
+table tr td:first-child {
+  text-align: end;
+}
+
+table tr td:last-child {
+  text-align: start;
+}
+
+table tbody tr {
+  background-color: var(--table-color-1);
+  /* border-bottom: 1px solid #464646; */
+}
+
+table tbody tr:nth-of-type(even) {
+  background-color: var(--table-color-2);
+}
+
+table tbody tr:last-of-type {
+  border-bottom: 1px solid var(--table-accent-color);
+}
+
+/* **************** */
+
+.form {
+  margin-block-end: 3.2rem;
+}
+
+form {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  background-color: #262626;
+  border-radius: 7px;
+  /* border: 1px solid white; */
+  padding: 1.2rem;
+}
+
+.form-group:last-child {
+  padding: 0;
+  border: none;
+  border-radius: 7px;
+}
+
+.button-group {
+  display: flex;
+  align-content: stretch;
+  gap: 0.4rem;
+}
+
+.form-group button {
+  flex-grow: 1;
+  border-radius: 4px;
+  border: none;
+}
+
+.button-group button {
+  flex-grow: 1;
+}
+
+input[type='text'] {
+  background-color: #404040;
+  color: #a3a3a3;
+  border: 1px solid #525252;
+  border-radius: 4px;
+  padding: 0.2rem;
+}
+
+button {
+  background-color: #134e4a;
+  color: #ccfbf1;
+  padding: 0.8rem 0.4rem;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #115e59;
+}
+
+button:active {
+  background-color: #134e4a;
+}
